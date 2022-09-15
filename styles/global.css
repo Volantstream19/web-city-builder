@@ -22,8 +22,8 @@ header {
     align-items: center;
     gap: 10px;
 
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: rgb(150, 127, 166);
+    background: linear-gradient(153deg, rgba(150, 127, 166, 1) 19%, rgba(6, 6, 195, 1) 100%);
 }
 
 header .logo {
@@ -32,4 +32,18 @@ header .logo {
 
 main {
     padding: 20px;
+}
+
+.Display {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 3fr 5fr;
+    gap: 10vh;
+}
+
+.city-Disaster-styleq {
+    padding: 15px 0;
+    display: grid;
+    gap: 15px;
+    justify-items: center;
 }
