@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Space+Mono&display=swap');
+
 :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(254, 251, 245);
@@ -8,12 +10,18 @@
 body {
     font-family: var(--primary-font);
     background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DynaPuff', cursive;
+    background: rgb(230, 238, 255);
+    background: linear-gradient(153deg, rgba(230, 238, 255, 1) 0%, rgba(143, 143, 235, 1) 100%);
 }
 
 header {
-    position: sticky;
+    position: absolute;
+    width: 100vw;
     top: 0;
     padding: 15px;
     height: 80px;
@@ -22,8 +30,8 @@ header {
     align-items: center;
     gap: 10px;
 
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: rgb(150, 127, 166);
+    background: linear-gradient(153deg, rgba(150, 127, 166, 1) 19%, rgba(6, 6, 195, 1) 100%);
 }
 
 header .logo {
@@ -32,4 +40,40 @@ header .logo {
 
 main {
     padding: 20px;
+}
+
+.Display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 3fr 5fr;
+    gap: 10vh;
+}
+
+.city-Disaster-style {
+    padding: 15px 0;
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+}
+
+.weather-image {
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    margin: 0 1rem;
+    height: 150px;
+    width: 200px;
+    border-radius: 15px;
+}
+
+.city-image {
+    height: 150px;
+    width: 200px;
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    object-fit: cover;
+}
+select {
+    height: 20px !important;
+    width: 80px !important;
 }

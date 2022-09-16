@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header class="head">
+            <img class="logo" src="assets/images (4).jpg" alt="logo" />
+            <h1>Ultimate City Builder</h1>
+        </header>
 
-</head>
+        <main>
+            <section class="Display">
+                <label>
+                    City Name
+                    <br />
+                    <input id="nameEl" value="Displays" />
+                </label>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+                <label>
+                    City Weather
+                    <br />
+                    <select class="option-select" id="weather-type">
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                    </select>
+                </label>
 
-    <main>
+                <label>
+                    Pick Your City Type!
+                    <br />
+                    <select class="option-select" id="population">
+                        <option value="Utopia">Utopia</option>
+                        <option value="Modern">Modern</option>
+                        <option value="Mid-West">Mid West</option>
+                        <option value="Ghostland">Ghostland</option>
+                    </select>
+                </label>
 
-    </main>
+                <label>
+                    National Disaster
+                    <div class="add-Disaster">
+                        <input id="disasterEl" />
+                        <button id="disaster-Button">+</button>
+                    </div>
+                </label>
+            </section>
 
-</body>
-
+            <article class="city-Disaster-style" id="cityDisaster">
+                <h1>Welcome to <span id="cityNameDisplay">Utopia</span></h1>
+                <div class="centerImage">
+                    <img class="city-image" id="Cityimage" src="" />
+                    <img class="weather-image" id="weatherImage" src="" />
+                </div>
+                <ul id="disaster-List"></ul>
+            </article>
+        </main>
+    </body>
 </html>
