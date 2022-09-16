@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Space+Mono&display=swap');
+
 :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(254, 251, 245);
@@ -8,12 +10,18 @@
 body {
     font-family: var(--primary-font);
     background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DynaPuff', cursive;
+    background: rgb(230, 238, 255);
+    background: linear-gradient(153deg, rgba(230, 238, 255, 1) 0%, rgba(143, 143, 235, 1) 100%);
 }
 
 header {
-    position: sticky;
+    position: absolute;
+    width: 100vw;
     top: 0;
     padding: 15px;
     height: 80px;
@@ -37,6 +45,8 @@ main {
 .Display {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: 3fr 5fr;
     gap: 10vh;
 }
@@ -46,4 +56,20 @@ main {
     display: grid;
     gap: 15px;
     justify-items: center;
+}
+
+.weather-image {
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    margin: 0 1rem;
+    height: 150px;
+    width: 200px;
+    border-radius: 15px;
+}
+
+.city-image {
+    height: 150px;
+    width: 200px;
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    object-fit: cover;
 }

@@ -1,59 +1,73 @@
-/* Imports */
-
-/* Get DOM Elements */
 const nameInput = document.getElementById('nameEl');
 const weatherType = document.getElementById('weather-type');
 const cityType = document.getElementById('population');
+
 const display = document.getElementById('cityNameDisplay');
 const weatherImage = document.getElementById('weatherImage');
-const Cityimage = document.getElementById('Cityimage');
+const cityImage = document.getElementById('Cityimage');
+
 const cityDisaster = document.getElementById('population');
 const disasterEl = document.getElementById('disasterEl');
 const disasterButton = document.getElementById('disaster-Button');
 const disasterList = document.getElementById('disaster-List');
 
-
-
-
-/* State */
-const = city = {
-    name: 'Utopia',
-    weather: 'lake',
+const city = {
+    name: 'utopia',
+    weatherType: 'spring',
     population: 'Modern',
     disaster: [],
-
 };
 
-
-
-/* Events */
 nameInput.addEventListener('input', () => {
     city.name = nameInput.value;
     displayCity();
-})
+});
+
 nameInput.addEventListener('change', () => {
     city.weather = weatherType.value;
     displayCity();
-})
+});
+
 cityType.addEventListener('change', () => {
-    city.population = cityType.value;
+    city.cityDisaster = weatherType.value;
     displayCity();
-})
+});
 
+weatherType.addEventListener('change', () => {
+    weatherImage.src = `/assets/weather/${weatherType.value}.jpg`;
+});
+cityType.addEventListener('change', () => {
+    cityImage.src = `/assets/population/${cityType.value}.jpg`;
+});
 
-
-
-/* Display Functions */
 function displayCity() {
     cityDisaster.classList.value = '';
-    cityDisaster.classList.add(city.weather, city.population);
+    cityDisaster.classList.add(city.weather, city.cityType);
     display.textContent = city.name;
-    clientImage.src = 
 }
 
+function displayRule() {
+    nameInput.value = city.name;
+    weatherType.value = city.weather;
+    cityType.value = city.city;
+}
 
+function displayDisaster() {
+    disasterList.innerHTML = '';
 
+    for (const disaster of city.disaster) {
+        const li = document.createElement('li');
+        li.textContent = disaster;
+        disasterList.append(li);
+    }
+}
 
+disasterButton.addEventListener('click', () => {
+    city.disaster.push(disasterEl.value);
+    displayDisaster();
+    disasterEl.value = '';
+});
 
-
-// (don't forget to call any display functions you want to run on page load!)
+displayRule();
+displayCity();
+displayDisaster();
